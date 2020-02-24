@@ -3,13 +3,14 @@ const bot = new Discord.Client();
 const cfg = process.env.token;
 const prefix = ("?");
 const ID = (`667821962659233845`);
+
 bot.on("ready", () => {
     console.log("Ready");
     bot.user.setActivity("Type ?help");
     bot.user.setPresence({
         game: {
             name: 'Type ?help',
-            url : 'https://www.twitch.tv/aoxis_',
+            url: 'https://www.twitch.tv/aoxis_',
             type: 1
         }
     });
@@ -17,7 +18,7 @@ bot.on("ready", () => {
 //Message quand l'utilisateur leave le discord
 bot.on('guildMemberRemove', member => {
     let serverTag = member.guild.name
-    const welcomechannel = member.guild.channels.find('name', 'ⴆιҽɳʋҽɳυҽ')
+    const welcomechannel = member.guild.channels.find('name', 'ⴆιҽɳʋҽɳυҽ1')
     var embed = new Discord.RichEmbed()
         .setColor('#76D880')
         .setDescription(`<@${member.user.id}> a quitté ${serverTag} !! `)
@@ -29,7 +30,7 @@ bot.on('guildMemberRemove', member => {
 //Message quand l'utilisateur join le discord
 bot.on('guildMemberAdd', member => {
     let serverTag = member.guild.name
-    const welcomechannel = member.guild.channels.find('name', 'ⴆιҽɳʋҽɳυҽ')
+    const welcomechannel = member.guild.channels.find('name', 'ⴆιҽɳʋҽɳυҽ1')
     const role = member.guild.roles.find("name", "Joueur")
     member.addRole(role)
     var embed = new Discord.RichEmbed()
@@ -47,13 +48,12 @@ bot.on('message', msg => {
 Si tous les joueurs sont assez sage, il se pourrait que la personne qui m'a développer ainsi que le site, rajoute quelque easter egg. 
 Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
     }
-
     //help pour les joueurs
     if (msg.content === prefix + "helpstaff") {
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande helpstaff vient d'être utilisé par "+user);
+        chanID.send("La commande helpstaff vient d'être utilisé par " + user);
         let myRole = msg.guild.roles.find(role => role.name === "STAFF");
         var chm = bot.channels.find("name", "🚫šтαff🛠");
         chm.send(`${msg.author},demande de l'aide merci de l'aider ` + myRole);
@@ -63,7 +63,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande info vient d'être utilisé par "+user);
+        chanID.send("La commande info vient d'être utilisé par " + user);
         var aide_embed = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setTitle(`:robot: Informations sur le serveur Kub-Dom`)
@@ -80,7 +80,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande help vient d'être utilisé par "+user);
+        chanID.send("La commande help vient d'être utilisé par " + user);
         var aide_embed = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setTitle(`:robot: Voici mes catégories d'aide !`)
@@ -98,7 +98,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande joueur vient d'être utilisé par "+user);
+        chanID.send("La commande joueur vient d'être utilisé par " + user);
         var aide_embed = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setTitle(`:robot: Informations sur les commandes des joueurs`)
@@ -114,7 +114,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande staff vient d'être utilisé par "+user);
+        chanID.send("La commande staff vient d'être utilisé par " + user);
         if (msg.member.roles.some(r => ["STAFF"].includes(r.name))) {
             var aide_embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
@@ -135,7 +135,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande helpmods vient d'être utilisé par "+user);
+        chanID.send("La commande helpmods vient d'être utilisé par " + user);
         var aide_embed = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setTitle(`:robot: Informations sur les commandes des joueurs`)
@@ -151,7 +151,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande AE2 vient d'être utilisé par "+user);
+        chanID.send("La commande AE2 vient d'être utilisé par " + user);
         var aide_embed = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setTitle(`:floppy_disk: Informations sur le mod Applied Energistic 2`)
@@ -164,11 +164,11 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
             .setTimestamp()
         msg.channel.send(aide_embed);
     }
-      if (msg.content === prefix + "roost") {
+    if (msg.content === prefix + "roost") {
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande roost vient d'être utilisé par "+user);
+        chanID.send("La commande roost vient d'être utilisé par " + user);
         var aide_embed = new Discord.RichEmbed()
             .setColor('RANDOM')
             .setTitle(`:chicken: Informations sur le mod roost`)
@@ -185,7 +185,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande site vient d'être utilisé par "+user);
+        chanID.send("La commande site vient d'être utilisé par " + user);
         msg.channel.send("http://newnet.ovh/");
         msg.channel.send("Le site est fonctionnel mais fini qu'à 25%");
         console.log("Une personne a demandé pour aller sur ton site.")
@@ -194,14 +194,14 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande ip vient d'être utilisé par "+user);
+        chanID.send("La commande ip vient d'être utilisé par " + user);
         msg.channel.send("kubdom-serv.craft.gg");
     }
     if (msg.content === prefix + "serveur") {
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande serveur vient d'être utilisé par "+user);
+        chanID.send("La commande serveur vient d'être utilisé par " + user);
         msg.channel.send(` Le serveur est "pas encore cassé". You can play the game !! :kissing_heart: `);
     }
     var d = new Date();
@@ -228,7 +228,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande down vient d'être utilisé par "+user);
+        chanID.send("La commande down vient d'être utilisé par " + user);
         bot.users.get("323721774527152128").send("Commande exécuter par " + user + ". Le " + day + "/" + Mo + "/" + y + " à " + h + ":" + m + ":" + s + " le serveur vient de crash pense à le redémarrer assez vite pour que les joueurs puissent se reconnecter assez vite !!");
         bot.users.get("254557222070124544").send("Commande exécuter par " + user + " Kiki doit redémarrer le serveur le " + day + "/" + Mo + "/" + y + " à " + h + ":" + m + ":" + s);
     }
@@ -236,47 +236,36 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
         msg.delete();
         var chanID = bot.channels.get(ID)
-        chanID.send("La commande mods vient d'être utilisé par "+user);
+        chanID.send("La commande mods vient d'être utilisé par " + user);
         var user = msg.author.toString();
         msg.channel.send("```Liste des mods ayant une description ou fonctionnalité décrite (pour exemple faite ?roost affichera les info sur le mod):\n  -roost\n -Applied Energistic 2 (AE2)```");
     }
     if (msg.content === prefix + "clear") {
-        var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
-        msg.delete();
-        var chanID = bot.channels.get(ID)
-        chanID.send("La commande clear vient d'être utilisé par "+user);
-        if (msg.member.hasPermission("MANAGE_MESSAGES")) {
-            msg.channel.fetchMessages()
-                .then(function (list) {
-                    msg.channel.bulkDelete(list);
-                }, function (err) {
-                    msg.channel.send("Pas de assez de permission pour executer la commande")
-                })
+        if (msg.member.hasPermission("MANAGE_MESSAGES") && msg.member.roles.find("name", "bot-commander")) {
+            msg.channel.fetchMessages();
+            msg.channel.bulkDelete(100);
+            console.log('clear réussit');
+        } else {
+            msg.channel.send("Pas de assez de permission pour executer la commande");
+        }
+        msg.channel.send('clear réussit');
+    }
+    // Check if they have one of many roles
+    if (msg.content === prefix + "loterie") {
+        if (msg.member.roles.some(r => ["Dev", "Donateur", "Weekly-Player"].includes(r.name))) {
+            let myRole = msg.guild.roles.find(role => role.name === "STAFF");
+            var chm = bot.channels.find("name", "ʟøтeяıe-🎰");
+            var lot = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+            var lotterie = lot[Math.floor(Math.random() * lot.length)];
+            chm.send(`${msg.author},le numéro de ton lot est le ` + lotterie + ` ` + myRole);
+        } else {
+            var user = msg.author.toString();
+            msg.channel.send(user + ",tu dois avoir le rôle Donateur pour cette commande");
+            console.log(user + 'n\'a pas le rôle Donateur');
         }
     }
-    /*if (msg.content === prefix + "clear") {
-            if (msg.member.hasPermission("MANAGE_MESSAGES")) {
-                msg.channel.fetchMessages().then(function(list){msg.channel.bulkDelete(list);console.log('clear réussit');},
-    		function(err){msg.channel.send("Pas de assez de permission pour executer la commande");})                        
-            }
-    }*/
-    // Check if they have one of many roles
-    if(msg.content === prefix + "loterie") {
-    	if(msg.member.roles.some(r=>["Dev", "Donateur", "Weekly-Player"].includes(r.name)) ) {
-    	let myRole = msg.guild.roles.find(role => role.name === "STAFF");
-    	var chm = bot.channels.find("name", "ʟøтeяıe-🎰");
-    	 var lot = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-    	 var  lotterie= lot[Math.floor(Math.random() * lot.length)]; 	
-    	chm.send(`${msg.author},le numéro de ton lot est le `+lotterie+` `+myRole);
-    	}
-    	else{
-    	var user =msg.author.toString() ;
-    	msg.channel.send(user+ ",tu dois avoir le rôle Donateur pour cette commande");
-    	console.log(user+'n\'a pas le rôle Donateur');
-     }
-    }
     if (msg.content === prefix + "recompense") {
-         msg.delete();
+        msg.delete();
         if (msg.member.roles.some(r => ["STAFF"].includes(r.name))) {
             msg.channel.send("La commande pour donner la récompense aux donnateur : /function tirage:lance_tirage/cmd");
         } else {
