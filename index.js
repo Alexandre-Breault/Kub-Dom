@@ -250,31 +250,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         }
         msg.channel.send('clear réussit');
     }
-    // Check if they have one of many roles
-    if (msg.content === prefix + "loterie") {
-        if (msg.member.roles.some(r => ["Dev", "Donateur", "Weekly-Player"].includes(r.name))) {
-            let myRole = msg.guild.roles.find(role => role.name === "STAFF");
-            var chm = bot.channels.find("name", "ʟøтeяıe-🎰");
-            var lot = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-            var lotterie = lot[Math.floor(Math.random() * lot.length)];
-            chm.send(`${msg.author},le numéro de ton lot est le ` + lotterie + ` ` + myRole);
-        } else {
-            var user = msg.author.toString();
-            msg.channel.send(user + ",tu dois avoir le rôle Donateur pour cette commande");
-            console.log(user + 'n\'a pas le rôle Donateur');
-        }
-    }
-    if (msg.content === prefix + "recompense") {
-        msg.delete();
-        if (msg.member.roles.some(r => ["STAFF"].includes(r.name))) {
-            msg.channel.send("La commande pour donner la récompense aux donnateur : /function tirage:lance_tirage/cmd");
-        } else {
-            var user = msg.author.toString();
-            msg.channel.send(user + ",tu dois avoir le rôle STAFF pour cette commande");
-            console.log(user + 'n\'a pas le rôle STAFF');
-        }
-    }
-
+    
 });
 
 bot.login(cfg);
