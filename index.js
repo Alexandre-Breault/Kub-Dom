@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const cfg = ("NTIxNDE3OTgxNzEyOTI0Njgz.XlQN6Q.A8H7U6AKVBnI3PVuQGkxa3-CFDA");
+const cfg = process.env.token;
 const prefix = ("?");
-const ID = (`681564151390404625`);
+const ID = (`667821962659233845`);
 bot.on("ready", () => {
     console.log("Ready");
     bot.user.setActivity("Type ?help");
@@ -14,7 +14,7 @@ bot.on("ready", () => {
         }
     });
 })
-
+//Message quand l'utilisateur leave le discord
 bot.on('guildMemberRemove', member => {
     let serverTag = member.guild.name
     const welcomechannel = member.guild.channels.find('name', 'ⴆιҽɳʋҽɳυҽ')
@@ -26,7 +26,7 @@ bot.on('guildMemberRemove', member => {
     })
 
 });
-
+//Message quand l'utilisateur join le discord
 bot.on('guildMemberAdd', member => {
     let serverTag = member.guild.name
     const welcomechannel = member.guild.channels.find('name', 'ⴆιҽɳʋҽɳυҽ')
@@ -261,7 +261,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
             }
     }*/
     // Check if they have one of many roles
-    /*if(msg.content === prefix + "loterie") {
+    if(msg.content === prefix + "loterie") {
     	if(msg.member.roles.some(r=>["Dev", "Donateur", "Weekly-Player"].includes(r.name)) ) {
     	let myRole = msg.guild.roles.find(role => role.name === "STAFF");
     	var chm = bot.channels.find("name", "ʟøтeяıe-🎰");
@@ -274,8 +274,8 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
     	msg.channel.send(user+ ",tu dois avoir le rôle Donateur pour cette commande");
     	console.log(user+'n\'a pas le rôle Donateur');
      }
-    }*/
-    /*if (msg.content === prefix + "recompense") {
+    }
+    if (msg.content === prefix + "recompense") {
          msg.delete();
         if (msg.member.roles.some(r => ["STAFF"].includes(r.name))) {
             msg.channel.send("La commande pour donner la récompense aux donnateur : /function tirage:lance_tirage/cmd");
@@ -284,7 +284,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
             msg.channel.send(user + ",tu dois avoir le rôle STAFF pour cette commande");
             console.log(user + 'n\'a pas le rôle STAFF');
         }
-    }*/
+    }
 
 });
 
