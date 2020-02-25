@@ -1,0 +1,41 @@
+[33mcommit bd0fdeeec5c58d088e0fe655882a3bc2c59f39ab[m[33m ([m[1;36mHEAD -> [m[1;32mmod+[m[33m)[m
+Author: Alexandre <creepminecraft53@gmail.com>
+Date:   Tue Feb 25 19:35:29 2020 +0100
+
+    Fixed cfg variable for heroku
+
+[33mcommit 11c0911fa3a7d88707cfacaf30a73cfe81101df1[m[33m ([m[1;31morigin/mod+[m[33m)[m
+Author: Alexandre <creepminecraft53@gmail.com>
+Date:   Mon Feb 24 22:22:01 2020 +0100
+
+    Delete command for vanilla
+
+[33mcommit ecafbfefcaeda67b04b1185894d3b3da3c34226f[m
+Author: Alexandre <creepminecraft53@gmail.com>
+Date:   Mon Feb 24 22:19:21 2020 +0100
+
+    Initial Commit for mod
+
+[33mcommit b1ca6bbb7d1e89e22db6b97843838de2bc8970f8[m[33m ([m[1;33mtag: v1.0.2[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Alexandre <creepminecraft53@gmail.com>
+Date:   Mon Feb 24 22:11:54 2020 +0100
+
+    Add command ?clear
+
+[33mcommit 28bf7a162c36625419fb738176c5c76678a6dcd1[m
+Author: Alexandre <creepminecraft53@gmail.com>
+Date:   Mon Feb 24 20:31:30 2020 +0100
+
+    Add package.json
+
+[33mcommit 4a7ec42e255bf617ca12798525a7d0580d9d3a16[m[33m ([m[1;33mtag: v1.0.1[m[33m)[m
+Author: Alexandre <creepminecraft53@gmail.com>
+Date:   Mon Feb 24 20:21:28 2020 +0100
+
+    Add .gitignore and Procfile
+
+[33mcommit b5cb0ce7007ad4c6be5cf360654f406fc3f07f15[m[33m ([m[1;33mtag: v1.0[m[33m)[m
+Author: Alexandre <creepminecraft53@gmail.com>
+Date:   Mon Feb 24 19:20:54 2020 +0100
+
+    Initial commit

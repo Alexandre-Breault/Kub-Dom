@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const cfg = process.env.token;
+const cfg = ("NTIxNDE3OTgxNzEyOTI0Njgz.XlVnPg.ZL0n3XmaMr9tqcQF-bUo19TzOSQ");
 const prefix = ("?");
 const ID = (`667821962659233845`);
 
@@ -241,6 +241,8 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         msg.channel.send("```Liste des mods ayant une description ou fonctionnalité décrite (pour exemple faite ?roost affichera les info sur le mod):\n  -roost\n -Applied Energistic 2 (AE2)```");
     }
     if (msg.content === prefix + "clear") {
+        var date = new Date();
+        console.log(date.getTime());
         if (msg.member.hasPermission("MANAGE_MESSAGES") && msg.member.roles.find("name", "bot-commander")) {
             msg.channel.fetchMessages();
             msg.channel.bulkDelete(100);
