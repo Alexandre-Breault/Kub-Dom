@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const cfg = ("NTIxNDE3OTgxNzEyOTI0Njgz.XlVnPg.ZL0n3XmaMr9tqcQF-bUo19TzOSQ");
+const cfg = process.env.token;
 const prefix = ("?");
 const ID = (`667821962659233845`);
 
