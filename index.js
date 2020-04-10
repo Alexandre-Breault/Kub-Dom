@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const cfg = process.env.token;
+const cfg = ('NTIxNDE3OTgxNzEyOTI0Njgz.Xo8TSA.J678jRucjGul482B9rM7h8zVcEs');
 const prefix = ("?");
 const ID = (`667821962659233845`);
 
@@ -41,6 +41,8 @@ bot.on('guildMemberAdd', member => {
     })
 });
 
+bot.on( "message", message => require ("./uno.js")(bot, message));
+
 bot.on('message', msg => {
     // Check if they have one of many roles
     if (msg.content === prefix + "kdb") {
@@ -58,6 +60,7 @@ Le meilleur agent pour un serveur de KALITE. Kub-Dom's Bot `);
         var chm = bot.channels.find("name", "🚫šтαff🛠");
         chm.send(`${msg.author},demande de l'aide merci de l'aider ` + myRole);
     }
+
     //Help de kubdom
     if (msg.content === prefix + "info") {
         var user = msg.author.tag.slice(0, msg.author.tag.length - 5);
